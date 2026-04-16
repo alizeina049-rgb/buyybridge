@@ -1,99 +1,82 @@
-# buyybridge
-My global shopping service website
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Buy Bridge Store</title>
+<title>Buy Bridge</title>
 
 <style>
 body {
-  font-family: Arial;
   margin: 0;
-  background: #f4f4f4;
+  font-family: Arial;
+  background: #0b1a2f;
+  color: white;
+  text-align: center;
 }
 
 header {
-  background: #2c3e50;
-  color: white;
-  padding: 15px;
-  text-align: center;
-}
-
-.products {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
   padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.product {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  width: 200px;
-  text-align: center;
+.hero {
+  margin-top: 100px;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero p {
+  color: #ccc;
 }
 
 button {
-  background: #3498db;
-  color: white;
+  background: #3aa0d8;
   border: none;
-  padding: 10px;
+  padding: 12px 25px;
+  color: white;
+  margin-top: 20px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
-.cart {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background: white;
-  padding: 10px;
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 100px;
+  flex-wrap: wrap;
+}
+
+.box {
+  background: #1e2a40;
+  padding: 20px;
   border-radius: 10px;
+  width: 150px;
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
-  <h1>Buy Bridge 🛒</h1>
+  Buy Bridge
 </header>
 
-<div class="cart">
-  🛍 Cart: <span id="cart-count">0</span>
+<div class="hero">
+  <h1>We Buy Anything For You 🌍</h1>
+  <p>Send a link or request, we handle everything.</p>
+  <button>Start</button>
 </div>
 
-<div class="products">
-
-  <div class="product">
-    <h3>Shoes</h3>
-    <p>$50</p>
-    <button onclick="addToCart()">Add to Cart</button>
-  </div>
-
-  <div class="product">
-    <h3>Watch</h3>
-    <p>$80</p>
-    <button onclick="addToCart()">Add to Cart</button>
-  </div>
-
-  <div class="product">
-    <h3>Headphones</h3>
-    <p>$40</p>
-    <button onclick="addToCart()">Add to Cart</button>
-  </div>
-
+<div class="features">
+  <div class="box">🛒 We Buy</div>
+  <div class="box">✈️ We Ship</div>
+  <div class="box">📦 Customs</div>
+  <div class="box">🏠 Delivery</div>
 </div>
-
-<script>
-let count = 0;
-
-function addToCart() {
-  count++;
-  document.getElementById("cart-count").innerText = count;
-}
-</script>
 
 </body>
 </html>
