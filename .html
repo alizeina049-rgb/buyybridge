@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Service</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Arial;
+  background:#0f172a;
+  color:white;
+}
+
+header {
+  text-align:center;
+  padding:20px;
+  background:#020617;
+}
+
+.hero {
+  text-align:center;
+  padding:80px 20px;
+}
+
+.hero h1 {
+  font-size:40px;
+}
+
+.btn {
+  background:#38bdf8;
+  padding:12px 25px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.section {
+  text-align:center;
+  padding:50px;
+}
+
+.card {
+  display:inline-block;
+  background:#1e293b;
+  padding:20px;
+  margin:10px;
+  border-radius:10px;
+  width:220px;
+}
+
+form input, form textarea {
+  width:90%;
+  padding:10px;
+  margin:10px;
+  border:none;
+  border-radius:5px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>Your Company</h2>
+</header>
+
+<section class="hero">
+<h1>We Buy Anything For You 🌍</h1>
+<p>Send a link or request, we handle everything.</p>
+<button class="btn" onclick="scrollToForm()">Start</button>
+</section>
+
+<section class="section">
+<div class="card">🛒 We Buy</div>
+<div class="card">✈️ We Ship</div>
+<div class="card">📦 Customs</div>
+<div class="card">🏠 Delivery</div>
+</section>
+
+<section class="section" id="form">
+<h2>Send Request</h2>
+
+<form onsubmit="sendData(event)">
+<input type="text" placeholder="Name" required><br>
+<input type="email" placeholder="Email" required><br>
+<textarea placeholder="What do you want?"></textarea><br>
+<button class="btn">Send</button>
+</form>
+
+<p id="msg"></p>
+</section>
+
+<script>
+function scrollToForm(){
+  document.getElementById("form").scrollIntoView({behavior:"smooth"});
+}
+
+function sendData(e){
+  e.preventDefault();
+  document.getElementById("msg").innerText="✅ Sent successfully!";
+}
+</script>
+
+</body>
+</html>
